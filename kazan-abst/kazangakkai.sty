@@ -1,0 +1,33 @@
+% パッケージの読み込み
+\usepackage[version=3]{mhchem} % 化学式を\ce{hoge}で出力
+\usepackage{siunitx} % 単位の出力
+\usepackage{amsmath, amssymb} % 数式の出力
+% 余白の設定
+% 横余白：左右とも12 mm
+% 210 mm (全体) - ( 12 mm (左余白) + 12 mm (右余白) ) = 186 mm (本文) から指定
+\setlength{\textwidth}{186truemm}
+\setlength{\fullwidth}{\textwidth}
+\setlength{\oddsidemargin}{12truemm}
+\addtolength{\oddsidemargin}{-1truein}
+% 縦余白：上下とも15 mmが指定だが，実際は上に余裕をもたせる必要があるので20 mmにする
+% 294 mm (全体) - ( 20 mm (上余白) + 15 mm (下余白) ) = 259 mm (本文) から指定
+% ヘッダ・ページ番号は使用しないので0 ptとしている
+\setlength{\textheight}{259truemm}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{20truemm}
+\setlength{\footskip}{0truemm}
+\addtolength{\topmargin}{-1truein}
+% 体裁の設定
+\setlength{\columnsep}{8truemm} % 二段組の幅を8 mmに指定
+\renewcommand{\baselinestretch}{0.80} % 行間をやや狭める
+\pagestyle{empty} % ページ番号を出力しない
+% フォントをComputer ModernからLatin Modernに変更
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% タイトルの書式設定
+\usepackage{titlesec}
+\titleformat*{\section}{\normalsize}
+\titleformat*{\subsection}{\normalsize}
+
+% 数式中でハイフンを\mhyphで出力
+\DeclareMathSymbol{\mhyph}{\mathalpha}{operators}{`-}
